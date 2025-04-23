@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_buscar" android:title="Buscar y filtrar Actividades"/>
+        <item android:id="@+id/nav_lista" android:title="Lista de Actividades"/>
+        <item android:id="@+id/nav_promocionadas" android:title="Actividades Promocionadas"/>
+        <item android:id="@+id/nav_notificaciones" android:title="Configurar Notificaciones"/>
+        <item android:id="@+id/nav_redes" android:title="Publicar en Redes Sociales"/>
+        <item android:id="@+id/nav_asistencia" android:title="Gestionar Asistencia"/>
+    </group>
+</menu>
