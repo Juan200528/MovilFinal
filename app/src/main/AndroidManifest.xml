@@ -19,15 +19,9 @@
             android:name=".Inicio_Sesion"
             android:exported="false"
             android:theme="@style/Theme.MovilFinal" />
-        <activity
-            android:name=".InicioSesion"
-            android:exported="false"
-            android:theme="@style/Theme.MovilFinal" />
+
         <activity
             android:name=".PantallaPrincipal"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

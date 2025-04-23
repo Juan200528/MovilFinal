@@ -49,13 +49,14 @@
         android:backgroundTint="#03683E"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Botón de Iniciar Sesión con borde -->
+    <!-- Botón de Iniciar Sesión con borde (corregido: solo primera letra en mayúscula) -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLogin"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
         android:layout_width="225dp"
         android:layout_height="50dp"
-        android:text="Iniciar sesión"
-        android:textColor="#166534"
         android:background="@drawable/button_border"
-        style="@style/Base.Widget.AppCompat.Button.Borderless"/>
+        android:text="Iniciar sesión"
+        android:textAllCaps="false"
+        android:textColor="#166534" />
 </LinearLayout>
