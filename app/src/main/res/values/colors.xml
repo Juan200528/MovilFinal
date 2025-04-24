@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Colores básicos -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Palette colors - Material Design -->
+    <color name="colorPrimary">#004D40</color>       <!-- Teal 900 -->
+    <color name="colorPrimaryDark">#002F2B</color>    <!-- Teal 900 dark variant -->
+    <color name="colorAccent">#00897B</color>         <!-- Teal 700 -->
+
+    <!-- Navigation Drawer colors -->
+    <color name="nav_background">#004D40</color>      <!-- Igual a colorPrimary -->
+    <color name="nav_item_selected">#00695C</color>   <!-- Teal 800 -->
+    <color name="nav_section_header">#002F2B</color>  <!-- Igual a colorPrimaryDark -->
+    <color name="nav_text_color">#FFFFFF</color>      <!-- Igual a white -->
+
+    <!-- Additional semantic colors -->
+    <color name="toolbar_background">#002326</color>  <!-- Dark background for toolbar -->
+    <color name="text_secondary">#C3C3C3</color> <!-- Light gray for secondary text -->
+    <color name="darker_green">#002F2B</color>
 </resources>

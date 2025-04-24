@@ -1,7 +1,13 @@
 package com.juan.movilfinal;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.PopupMenu;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,31 +18,58 @@ import com.google.android.material.navigation.NavigationView;
 public class MenuActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
+    private LinearLayout perfilLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        // Configurar Navigation Drawer
+        // Drawer
         drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        // Configurar clic en el ícono de menú (hamburguesa)
+        // Menú hamburguesa
         findViewById(R.id.menu_icon).setOnClickListener(view -> {
             drawerLayout.openDrawer(GravityCompat.START);
         });
+
+        // Manejar clic en el perfil
+        perfilLayout = findViewById(R.id.perfil_layout);
+        perfilLayout.setOnClickListener(view -> mostrarMenuPerfil(view));
+    }
+
+    private void mostrarMenuPerfil(View anchor) {
+        PopupMenu popup = new PopupMenu(this, anchor);
+        popup.getMenuInflater().inflate(R.menu.menu_perfil, popup.getMenu());
+
+        // Obtener el nombre desde SharedPreferences
+        SharedPreferences prefs = getSharedPreferences("usuario", MODE_PRIVATE);
+        String nombre = prefs.getString("nombre", "Usuario");
+        popup.getMenu().findItem(R.id.menu_nombre_usuario).setTitle("Bienvenido\n" + nombre);
+
+        popup.setOnMenuItemClickListener(item -> {
+            if (item.getItemId() == R.id.menu_cerrar_sesion) {
+                // Limpiar sesión y volver al login
+                prefs.edit().clear().apply();
+                //Intent intent = new Intent(MenuActivity.this, PantallaPrincipal.class);
+              //  intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+               // startActivity(intent);
+                return true;
+            }
+            return false;
+        });
+
+        popup.show();
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        // Manejar selección de items del menú
+        // Menú lateral
         int id = item.getItemId();
 
-        if (id == R.id.nav_actividades) {
-            showToast("Actividades solidarias");
-        } else if (id == R.id.nav_buscar) {
+        if (id == R.id.nav_buscar) {
             showToast("Buscar y Filtrar Actividades");
         } else if (id == R.id.nav_liga) {
             showToast("Liga de Actividades");

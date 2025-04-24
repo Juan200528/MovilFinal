@@ -12,9 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovilFinal"
         tools:targetApi="31">
-        <activity
-            android:name=".FragmentBuscar"
-            android:exported="false" />
+
         <activity
             android:name=".MenuActivity"
             android:exported="true">

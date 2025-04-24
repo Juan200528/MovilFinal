@@ -48,18 +48,32 @@
                 android:layout_height="1dp"
                 android:layout_weight="1"/>
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/user"
-                android:layout_marginEnd="16dp"/>
-
-            <TextView
+            <!-- Nuevo LinearLayout clickeable para mostrar el menú -->
+            <LinearLayout
+                android:id="@+id/perfil_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Perfil"
-                android:textColor="#C3C3C3"
-                android:textSize="20sp"/>
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="4dp"
+                android:background="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/user"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/perfil_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perfil"
+                    android:textColor="#C3C3C3"
+                    android:textSize="20sp"/>
+            </LinearLayout>
         </LinearLayout>
 
         <!-- Contenido de tu app aquí -->
@@ -78,6 +92,5 @@
         android:background="#004D40"
         app:itemTextColor="#FFFFFF"
         app:itemIconTint="#FFFFFF"
-        app:menu="@menu/nav_menu"
-        app:headerLayout="@layout/nav_header"/>
+        app:menu="@menu/nav_menu"/>
 </androidx.drawerlayout.widget.DrawerLayout>
