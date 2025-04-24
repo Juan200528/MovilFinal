@@ -1,61 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Título de sección (no clickeable) -->
     <item
-        android:title="ACTIVIDADES"
-        android:enabled="false"
-        android:titleTextColor="@color/white"
-        android:background="@color/darker_green"/>
+        android:title="PanascOOP"/>
 
-    <!-- Opciones principales -->
     <item
         android:id="@+id/nav_buscar"
-        android:title="Buscar y filtrar actividades"
-        android:paddingStart="24dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp"/>
-
+        android:title="Buscar y Filtrar Actividades"/>
     <item
         android:id="@+id/nav_liga"
-        android:title="Liga de actividades"
-        android:paddingStart="24dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp"/>
-
+        android:title="Liga de Actividades"/>
     <item
         android:id="@+id/nav_presenciales"
-        android:title="Actividades presenciales"
-        android:paddingStart="24dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp"/>
-
-    <!-- Separador visual -->
-    <item
-        android:title="CONFIGURACIÓN"
-        android:enabled="false"
-        android:titleTextColor="@color/white"
-        android:background="@color/darker_green"/>
-
-    <!-- Opciones de configuración -->
+        android:title="Actividades Presenciales"/>
     <item
         android:id="@+id/nav_notificaciones"
-        android:title="Configurar notificaciones"
-        android:paddingStart="24dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp"/>
-
+        android:title="Configurar Notificaciones"/>
     <item
         android:id="@+id/nav_redes"
-        android:title="Publicar en redes"
-        android:paddingStart="24dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp"/>
-
+        android:title="Publicar en Redes Sociales"/>
     <item
         android:id="@+id/nav_asistencia"
-        android:title="Gestionar asistencia"
-        android:paddingStart="24dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp"/>
+        android:title="Gestionar Asistencia"/>
 </menu>
